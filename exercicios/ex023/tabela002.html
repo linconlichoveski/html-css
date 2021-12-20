@@ -5,8 +5,67 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tabelas Grandes</title>
+    <style>
+        table {
+            width: 500px;
+            border-collapse: collapse;
+        }
+
+        th, td {
+            border: 1px solid black;
+            padding: 5px;
+        }
+
+        thead {
+            background-color: gray;
+            color: white;
+        }
+
+        tbody > tr:nth-child(2n) { /* even para linhas pares, e odd para linhas ímpares */
+            background-color: lightgray;
+        }
+    </style>
 </head>
 <body>
-    
+    <h1>Uso de tabelas grandes</h1>
+    <!-- Anatomia para tabelas Grandes
+    table
+        caption
+        table head thead
+            tr td th
+        table body tbody
+            tr td th
+        table foot tfoot
+            tr td th
+        -->
+        <table>
+            <caption>População dos Estados</caption>
+            <thead>
+                <tr>
+                    <th scope="col">Estado</th>
+                    <th scope="col">População</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>São Paulo</td>
+                    <td>49 919 049</td>
+                </tr>
+                <tr>
+                    <td>Minas Gerais</td>
+                    <td>21 168 791</td>
+                </tr>
+                <tr>
+                    <td>Rio de Janeiro</td>
+                    <td>17 264 146</td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <th scope="row">Total de Habitantes</th>
+                    <td>00000</td>
+                </tr>
+            </tfoot>
+        </table>
 </body>
 </html>
